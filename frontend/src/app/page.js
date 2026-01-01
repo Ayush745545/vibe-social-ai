@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar"
 import FeatureCard from "@/components/FeatureCard"
+import PricingCard from "@/components/PricingCard"
 
 
 export default function Home() {
@@ -58,6 +59,60 @@ export default function Home() {
 
           </div>
 
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="mt-56 px-6">
+        <div className="max-w-6xl mx-auto">
+
+          <h3 className="text-center text-3xl md:text-4xl font-bold mb-6">
+            Simple <span className="text-green-400">Pricing</span> for Everyone
+          </h3>
+
+          <p className="text-center text-gray-400 mb-16">
+            Start free. Upgrade when you grow.
+          </p>
+
+          <div className="grid grid-cols-3 gap-8">
+
+            <PricingCard
+              title="Free"
+              price="₹0"
+              description="Perfect to try Vibe Social"
+              features={[
+                "5 AI generations/day",
+                "Basic captions",
+                "Limited reel ideas",
+              ]}
+            />
+
+            <PricingCard
+              title="Creator"
+              price="₹299"
+              popular
+              description="For serious creators & freelancers"
+              features={[
+                "Unlimited captions",
+                "Unlimited reel ideas",
+                "Hinglish & Hindi support",
+                "Priority AI",
+              ]}
+            />
+
+            <PricingCard
+              title="Pro"
+              price="₹599"
+              description="For brands & growing teams"
+              features={[
+                "Everything in Creator",
+                "Image enhancer",
+                "Early access to video reels",
+                "Premium support",
+              ]}
+            />
+
+          </div>
         </div>
       </section>
     </main>
